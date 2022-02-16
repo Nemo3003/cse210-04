@@ -4,7 +4,7 @@
 
 # import pygame module in this program 
 import pygame
-  
+import random
 # activate the pygame library .  
 # initiate pygame and give permission  
 # to use pygame's functionality.  
@@ -20,13 +20,15 @@ pygame.display.set_caption("Moving rectangle")
 # object current co-ordinates 
 x = 200
 y = 200
+
+
   
 # dimensions of the object 
 width = 20
 height = 20
   
 # velocity / speed of movement
-vel = 10
+vel = 1
   
 # Indicates pygame is running
 run = True
@@ -34,7 +36,7 @@ run = True
 # infinite loop 
 while run:
     # creates time delay of 10ms 
-    pygame.time.delay(10)
+    pygame.time.delay(1)
       
     # iterate over the list of Event objects  
     # that was returned by pygame.event.get() method.  
@@ -80,7 +82,21 @@ while run:
       
     # drawing object on screen which is rectangle here 
     pygame.draw.rect(win, (255, 0, 0), (x, y, width, height))
-      
+    #This is an experiment, I created another rectangle, set its co-ordinates, and then draw it on the screen.
+    #if the user goes through it, the window will close.
+    x_random = random.randint(0, 500)
+    y_random = random.randint(0, 500)
+    pygame.draw.rect(win, (255, 0, 0), (x_random, y_random, width, height))
+    pygame.draw.rect(win, (255, 0, 0), (x_random, y_random, width, height))
+    pygame.draw.rect(win, (255, 0, 0), (x_random, y_random, width, height))
+    pygame.draw.rect(win, (255, 0, 0), (x_random, y_random, width, height))
+    pygame.draw.rect(win, (255, 0, 0), (x_random, y_random, width, height))
+    pygame.draw.rect(win, (255, 0, 0), (x_random, y_random, width, height))
+    pygame.draw.rect(win, (255, 0, 0), (x_random, y_random, width, height))
+    if x == x_random and y == y_random:
+        print("You Win!")
+        run = False
+    
     # it refreshes the window
     pygame.display.update() 
   
