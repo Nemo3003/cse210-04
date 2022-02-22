@@ -1,8 +1,4 @@
-import os
-import random
-
 from game.casting.actor import Actor
-from game.casting.stone import Stone
 from game.casting.cast import Cast
 from game.casting.score import Score
 
