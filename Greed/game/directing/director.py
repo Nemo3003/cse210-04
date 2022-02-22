@@ -46,8 +46,8 @@ class Director:
         rock.set_points(-1)
         rock.set_velocity(Point(0,5))
         rock.set_position(Point(r.randint(15, 885),15))
-        blue = Color(0,0,255)
-        rock.set_color(blue)
+        red = Color(255,0,0)
+        rock.set_color(red)
 
         cast.add_actor("stones", gem)
         cast.add_actor("stones", rock)
