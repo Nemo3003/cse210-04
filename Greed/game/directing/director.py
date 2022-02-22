@@ -34,7 +34,7 @@ class Director:
 
     def _do_updates(self, cast):
         gem = Stone()
-        gem.set_text("\U0001F4A0") #recommend $ or + or <> sign for the gem
+        gem.set_text("$") #recommend $ or + or <> sign for the gem 💠\U0001F4A0
         gem.set_points(1)
         gem.set_velocity(Point(0,5))
         gem.set_position(Point(r.randint(15, 885),15))
@@ -42,7 +42,7 @@ class Director:
         gem.set_color(green)
 
         rock = Stone()
-        rock.set_text("\U0001faa8") #recommend O or @ for the rock
+        rock.set_text("O") #recommend O or @ for the rock 🧱\U0001F9F1
         rock.set_points(-1)
         rock.set_velocity(Point(0,5))
         rock.set_position(Point(r.randint(15, 885),15))
@@ -62,7 +62,7 @@ class Director:
         for actor in cast.get_actors("stones"):
             actor.move_next(max_x, max_y)
 
-            if actor.get_text() == "\U0001F4A0": #recommend $ or + or <> sign for the gem
+            if actor.get_text() == "$": #recommend $ or + or <> sign for the gem  💠\U0001F4A0
                 actor_x = actor.get_position().get_x()
                 actor_y = actor.get_position().get_y()
                 if ((player_x - 10 < actor_x < player_x + 10) and (player_y - 10 < actor_y < player_y + 10)):
@@ -70,7 +70,7 @@ class Director:
                 if actor_y > max_y - 30 or((player_x - 10 < actor_x < player_x + 10) and (player_y - 10 < actor_y < player_y + 10)):
                     cast.remove_actor("stones", actor)
                     
-            elif actor.get_text() == "\U0001faa8": #recommend O or @ for the rock
+            elif actor.get_text() == "O": #recommend O or @ for the rock 🧱\U0001F9F1
                 actor_x = actor.get_position().get_x()
                 actor_y = actor.get_position().get_y()
                 if ((player_x - 10 < actor_x < player_x + 10) and (player_y - 10 < actor_y < player_y + 10)):
