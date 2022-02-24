@@ -9,15 +9,18 @@ from game.services.video_service import VideoService
 
 from game.shared.color import Color
 from game.shared.point import Point
+import emoji
 
-FRAME_RATE = 30
+img = emoji.emojize(":smile:", use_aliases=True)
+
+FRAME_RATE = 60
 MAX_X = 900
 MAX_Y = 600
 CELL_SIZE = 15
 FONT_SIZE = 30
 COLS = 60
 ROWS = 40
-CAPTION = "Greed"
+CAPTION = img + "Greed"
 WHITE = Color(255, 255, 255)
 BLUE = Color(0, 0, 255)
 
@@ -28,7 +31,7 @@ def main():
     position = Point(x, y)
 
     player = Actor()
-    player.set_text("^")
+    player.set_text("(*^*)")
     player.set_font_size(FONT_SIZE)
     player.set_color(BLUE)
     player.set_position(position)

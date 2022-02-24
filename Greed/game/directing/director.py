@@ -2,6 +2,8 @@ from game.casting.stone import Stone
 from game.shared.point import Point
 from game.shared.color import Color
 import random as r
+import emoji
+
 
 WHITE = Color(255, 255, 255)
 
@@ -36,7 +38,7 @@ class Director:
         gem = Stone()
         gem.set_text("$") #recommend $ or + or <> sign for the gem 💠\U0001F4A0
         gem.set_points(1)
-        gem.set_velocity(Point(0,5))
+        gem.set_velocity(Point(0,4))
         gem.set_position(Point(r.randint(15, 885),15))
         green = Color(0, 255, 0)
         gem.set_color(green)
@@ -44,7 +46,7 @@ class Director:
         rock = Stone()
         rock.set_text("O") #recommend O or @ for the rock 🧱\U0001F9F1
         rock.set_points(-1)
-        rock.set_velocity(Point(0,5))
+        rock.set_velocity(Point(0,3))
         rock.set_position(Point(r.randint(15, 885),15))
         red = Color(255,0,0)
         rock.set_color(red)
