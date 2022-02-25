@@ -8,3 +8,5 @@ Greed is played according to the following rules.
 * If the player touches a rock they lose a point.
 * Gems and rocks are removed when the player touches them.
 * The game continues until the player closes the window.
+
+!IMPORTANT! The game is in the "Greed" folder
